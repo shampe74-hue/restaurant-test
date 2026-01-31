@@ -2,7 +2,7 @@
 
 Pojet en cours (Work in Progress)
 
-Projet personnel et fictif réalisé dans le cadre de mon appprentissage du developpement web.
+Projet personnel et fictif réalisé dans le cadre de mon apprentissage du developpement web.
 
 ## Objectifs 
 - Structure HTML sémentique.
