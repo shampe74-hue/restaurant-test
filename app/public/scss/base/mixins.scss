@@ -1,0 +1,19 @@
+// mixin text
+@mixin fluid-text($min, $ideal, $max) {
+  font-size: clamp($min, $ideal, $max);
+}
+
+// responsive
+@mixin responsive($taille) {
+  @media (max-width: $taille) {
+    @content;
+  }
+}
+
+// Flex
+@mixin flexbox($flexDirection, $justifyContent, $alignItem) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
