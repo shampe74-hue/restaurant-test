@@ -1,0 +1,6 @@
+@use "../base/variable.scss" as *;
+
+footer {
+  background-color: $bg-primary;
+  color: $color-text;
+}

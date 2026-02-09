@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"footer.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/layout/footer.scss","../../scss/base/variable.scss"],"names":[],"mappings":"AAEA;EACE,kBCOW;EDNX,OCUW","file":"footer.css"}

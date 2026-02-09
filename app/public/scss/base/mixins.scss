@@ -17,3 +17,8 @@
   justify-content: $justifyContent;
   align-items: $alignItem;
 }
+
+// transition
+@mixin transition($propriete) {
+  transition: $propriete, 0.3s, ease;
+}

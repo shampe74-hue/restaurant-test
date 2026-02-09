@@ -1,0 +1,6 @@
+@use "../base/variable.scss" as *;
+
+header {
+  background-color: $bg-primary;
+  color: $color-text;
+}
