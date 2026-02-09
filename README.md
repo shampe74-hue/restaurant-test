@@ -12,4 +12,4 @@ Projet personnel et fictif réalisé dans le cadre de mon apprentissage du devel
 - Utilisation de Git et GitHub
 
 ## Etat du projet
-50%
+70%
