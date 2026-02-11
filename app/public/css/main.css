@@ -16,6 +16,17 @@ body {
   background-color: #fffaf0;
 }
 
+main {
+  max-width: 1200px;
+  width: 80%;
+  margin: 3rem auto;
+  min-height: 70dvh;
+}
+
+section {
+  margin: 3rem 0;
+}
+
 ul,
 ol {
   list-style: none;
@@ -45,17 +56,20 @@ body {
 
 h1 {
   font-size: clamp(3.5rem, 7vw, 5rem);
-  letter-spacing: 10px;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 h2 {
   font-size: clamp(2rem, 4vw, 2.5rem);
   letter-spacing: 2px;
+  margin: 2rem 0;
 }
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   letter-spacing: 2px;
+  margin: 2rem 0;
 }
 
 h4 {
@@ -75,13 +89,198 @@ footer li {
 }
 
 header {
+  position: relative;
   background-color: #8b4512;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+header .header_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 0 100%;
+}
+header .header_top figure {
+  margin-inline: 0.7rem;
+  border: none;
+}
+header .header_top button {
+  border: none;
+  background: inherit;
+  color: white;
+}
+header nav {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: 100%;
+  pointer-events: none;
+  background-color: #eb8b46;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+header nav button {
+  border: none;
+  background: inherit;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+}
+header nav ul li {
+  width: auto;
+  margin: 1rem 0;
+  border-bottom: 1px white dotted;
+  color: black;
+}
+header nav.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
+.header-home .banner {
+  flex-basis: 100%;
+  min-height: 50dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header .header_top {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  header nav {
+    flex-basis: 40%;
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    overflow: visible;
+    background: none;
+    width: auto;
+    height: auto;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+  }
+  header button {
+    display: none;
+  }
+}
 footer {
   background-color: #8b4512;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 3rem;
+  padding: 1.5rem;
+}
+footer .footer__brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+footer .footer__contact a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+footer .footer__info li {
+  margin: 1.5rem 0;
+}
+footer p {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-template-areas: "brand brand" "contact info" "copy copy";
+  }
+  footer .footer__brand {
+    grid-area: brand;
+  }
+  footer .footer__contact {
+    grid-area: contact;
+  }
+  footer .footer__info {
+    grid-area: info;
+  }
+  footer p {
+    grid-area: copy;
+  }
+}
+.home_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.home_main .home_section {
+  text-align: center;
+}
+.home_main .home_figure {
+  flex: 0 0 45%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .home_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .home_main .home_section {
+    flex: 0 0 45%;
+  }
+  .home_main .home_figure {
+    flex: 0 0 45%;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

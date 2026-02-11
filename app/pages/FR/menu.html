@@ -33,16 +33,54 @@
     <title>Menu du restaurant français à Genève | La Boucle</title>
   </head>
   <body>
-    <header role="banner">
+    <header class="header-home">
       <div class="header_top">
         <figure>
           <img src="" alt="logo" width="60" height="60" />
         </figure>
 
         <h1><a href="../../../index.html">La Boucle</a></h1>
+
+        <button class="header-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg>
+        </button>
       </div>
 
       <nav aria-label="Naviagation principal">
+        <button class="header-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+          </svg>
+        </button>
         <ul>
           <li><a href="../../../index.html">Acceuil</a></li>
           <li><a href="menu.html">Menu</a></li>
@@ -57,6 +95,27 @@
 
     <main>
       <aside>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-category-2"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M14 4h6v6h-6l0 -6" />
+            <path d="M4 14h6v6h-6l0 -6" />
+            <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M4 7a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+          </svg>
+          Navigation carte
+        </button>
         <nav aria-label="Navigation interne">
           <ul>
             <li>
@@ -340,5 +399,6 @@
 
       <p>&copy;2026</p>
     </footer>
+    <script src="../../public/js/script.js"></script>
   </body>
 </html>

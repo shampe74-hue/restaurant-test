@@ -1,0 +1,31 @@
+.home_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.home_main .home_section {
+  text-align: center;
+}
+.home_main .home_figure {
+  flex: 0 0 45%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .home_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .home_main .home_section {
+    flex: 0 0 45%;
+  }
+  .home_main .home_figure {
+    flex: 0 0 45%;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

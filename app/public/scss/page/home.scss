@@ -1,0 +1,28 @@
+@use "../base/mixins.scss" as *;
+@use "../base/variable.scss" as *;
+
+.home_main {
+  @include flexbox(column, space-between, stretch);
+  .home_section {
+    text-align: center;
+  }
+
+  .home_figure {
+    flex: 0 0 45%;
+    text-align: center;
+  }
+}
+
+@include responsive($bp-md) {
+  .home_main {
+    @include flexbox(row, space-between, stretch);
+    .home_section {
+      flex: 0 0 45%;
+    }
+
+    .home_figure {
+      flex: 0 0 45%;
+      text-align: center;
+    }
+  }
+}

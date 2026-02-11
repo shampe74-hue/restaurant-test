@@ -4,10 +4,11 @@
 @use "base/variable.scss";
 @use "base/mixins.scss";
 
-// Composant
-@use "components/buttons.scss";
-
 //Layout
 @use "layout/header.scss";
-@use "layout/main.scss";
 @use "layout/footer.scss";
+
+// page
+@use "page/home.scss";
+@use "page/menu.scss";
+@use "page/restaurant.scss";

@@ -1,6 +1,110 @@
 @use "../base/variable.scss" as *;
+@use "../base/mixins.scss" as *;
 
 header {
+  position: relative;
   background-color: $bg-primary;
   color: $color-text;
+  @include flexbox(column, space-between, stretch);
+
+  .header_top {
+    @include flexbox(row, space-evenly, center);
+    flex: 0 0 100%;
+
+    figure {
+      margin-inline: 0.7rem;
+      border: none;
+    }
+
+    button {
+      border: none;
+      background: inherit;
+      color: $color-text;
+    }
+  }
+
+  nav {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 100%;
+    pointer-events: none;
+    background-color: $color-btn;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition:
+      opacity 2s ease,
+      transform 2s ease;
+
+    button {
+      border: none;
+      background: inherit;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+    }
+    ul {
+      @include flexbox(column, center, center);
+      text-align: center;
+      padding: 1rem 0;
+
+      li {
+        width: auto;
+        margin: 1rem 0;
+        border-bottom: 1px $color-text dotted;
+        color: black;
+      }
+    }
+  }
+
+  nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.header-home {
+  .banner {
+    flex-basis: 100%;
+    min-height: 50dvh;
+    @include flexbox(column, none, center);
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@include responsive($bp-md) {
+  header {
+    @include flexbox(row, flex-start, center);
+    flex-wrap: wrap;
+
+    .header_top {
+      flex-basis: 60%;
+      @include flexbox(row, flex-start, center);
+    }
+
+    nav {
+      flex-basis: 40%;
+      position: static;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+      background: none;
+      width: auto;
+      height: auto;
+      ul {
+        @include flexbox(row, space-between, center);
+        padding-inline: 1rem;
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
 }

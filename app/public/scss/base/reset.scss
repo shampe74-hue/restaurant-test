@@ -18,6 +18,17 @@ body {
   background-color: $bg-colors;
 }
 
+main {
+  max-width: 1200px;
+  width: 80%;
+  margin: 3rem auto;
+  min-height: 70dvh;
+}
+
+section {
+  margin: 3rem 0;
+}
+
 ul,
 ol {
   list-style: none;

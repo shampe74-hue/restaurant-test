@@ -1,6 +1,59 @@
 @use "../base/variable.scss" as *;
+@use "../base/mixins.scss" as *;
 
 footer {
   background-color: $bg-primary;
   color: $color-text;
+  @include flexbox(column, center, stretch);
+  gap: 3rem;
+  padding: 1.5rem;
+
+  .footer__brand {
+    @include flexbox(row, space-evenly, flex-start);
+  }
+
+  .footer__contact {
+    a {
+      @include flexbox(row, flex-start, center);
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+  }
+
+  .footer__info {
+    li {
+      margin: 1.5rem 0;
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
+
+@include responsive($bp-md) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-template-areas:
+      "brand brand"
+      "contact info"
+      "copy copy";
+
+    .footer__brand {
+      grid-area: brand;
+    }
+
+    .footer__contact {
+      grid-area: contact;
+    }
+
+    .footer__info {
+      grid-area: info;
+    }
+
+    p {
+      grid-area: copy;
+    }
+  }
 }

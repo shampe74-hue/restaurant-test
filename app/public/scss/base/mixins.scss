@@ -5,7 +5,7 @@
 
 // responsive
 @mixin responsive($taille) {
-  @media (max-width: $taille) {
+  @media (min-width: $taille) {
     @content;
   }
 }
