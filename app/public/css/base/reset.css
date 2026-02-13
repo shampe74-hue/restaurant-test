@@ -13,10 +13,10 @@ html {
 
 body {
   line-height: 1.6;
-  background-color: #fffaf0;
+  background-color: #f8e9c9;
 }
 
-main {
+.home-main {
   max-width: 1200px;
   width: 80%;
   margin: 3rem auto;

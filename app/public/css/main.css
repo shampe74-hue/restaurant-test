@@ -13,10 +13,10 @@ html {
 
 body {
   line-height: 1.6;
-  background-color: #fffaf0;
+  background-color: #f8e9c9;
 }
 
-main {
+.home-main {
   max-width: 1200px;
   width: 80%;
   margin: 3rem auto;
@@ -63,7 +63,6 @@ h1 {
 h2 {
   font-size: clamp(2rem, 4vw, 2.5rem);
   letter-spacing: 2px;
-  margin: 2rem 0;
 }
 
 h3 {
@@ -280,6 +279,96 @@ footer p {
   .home_main .home_figure {
     flex: 0 0 45%;
     text-align: center;
+  }
+}
+.btn-nav-second {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #eb8b46;
+  border: none;
+  padding: 1rem;
+}
+
+.nav-aside {
+  background-color: #eb8b46;
+  opacity: 0;
+  transform: translateY(-50px);
+  overflow: hidden;
+  pointer-events: none;
+  max-height: 0;
+  transition: transform 2s ease, opacity 2s ease, max-height 2s ease;
+}
+.nav-aside ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1rem;
+}
+
+.menu_restau figure {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.nav-aside.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  max-height: 500px;
+}
+
+@media (min-width: 768px) {
+  .nav-aside {
+    background-color: #eb8b46;
+    opacity: 1;
+    transform: translateY(0);
+    overflow: hidden;
+    pointer-events: auto;
+    max-height: 100vh;
+    transition: transform 2s ease, opacity 2s ease, max-height 2s ease;
+  }
+  .nav-aside ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 1rem;
+  }
+  .main_menu {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: "aside menu";
+    gap: 5rem;
+    max-width: 1200px;
+    width: 95%;
+    margin-inline: auto;
+  }
+  .main_menu aside {
+    grid-area: aside;
+  }
+  .main_menu .menu_restau {
+    grid-area: menu;
+    max-width: 1000px;
+    padding: 2rem;
+  }
+  .main_menu .menu_restau section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .main_menu .menu_restau section h3 {
+    flex: 0 0 100%;
+  }
+  .main_menu .menu_restau section ul {
+    flex: 0 0 60%;
+  }
+  .main_menu .menu_restau section figure {
+    flex: 0 0 40%;
   }
 }
 
