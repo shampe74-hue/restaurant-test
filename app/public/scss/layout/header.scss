@@ -54,8 +54,11 @@ header {
       li {
         width: auto;
         margin: 1rem 0;
-        border-bottom: 1px $color-text dotted;
         color: black;
+        transition: 0.2;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -71,7 +74,7 @@ header {
   .banner {
     flex-basis: 100%;
     min-height: 50dvh;
-    @include flexbox(column, none, center);
+    @include flexbox(column, center, center);
     justify-content: center;
     text-align: center;
   }

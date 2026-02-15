@@ -1,6 +1,12 @@
 @use "../base/mixins.scss" as *;
 @use "../base/variable.scss" as *;
 
+.main_menu {
+  @include flexbox(column, flex-start, stretch);
+  max-width: 1200px;
+  width: 95%;
+  margin-inline: auto;
+}
 .btn-nav-second {
   @include flexbox(row, flex-start, center);
   background-color: $color-btn;
@@ -41,11 +47,15 @@
 }
 
 @include responsive($bp-md) {
+  .btn-nav-second {
+    display: none;
+  }
+
   .nav-aside {
     background-color: $color-btn;
     opacity: 1;
     transform: translateY(0);
-    overflow: hidden;
+    overflow: visible;
     pointer-events: auto;
     max-height: 100vh;
     transition:
@@ -64,8 +74,7 @@
     grid-template-columns: 150px 1fr;
     grid-template-areas: "aside menu";
     gap: 5rem;
-    max-width: 1200px;
-    width: 95%;
+
     margin-inline: auto;
 
     aside {

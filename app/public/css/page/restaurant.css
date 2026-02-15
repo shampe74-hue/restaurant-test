@@ -1,3 +1,26 @@
-
+.main_p_restaurant {
+  max-width: 1200px;
+  width: 80%;
+  margin: 2rem auto;
+}
+.main_p_restaurant .photo {
+  min-height: 50dvh;
+}
+.main_p_restaurant .photo h2 {
+  text-align: center;
+}
+.main_p_restaurant .loc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main_p_restaurant .loc .loc_map {
+  width: 100%;
+}
+.main_p_restaurant .loc .loc_map iframe {
+  width: 100%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=restaurant.css.map */

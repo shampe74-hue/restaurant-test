@@ -1,0 +1,27 @@
+@use "../base/mixins.scss" as *;
+@use "../base/variable.scss" as *;
+
+.main_p_restaurant {
+  max-width: 1200px;
+  width: 80%;
+  margin: 2rem auto;
+
+  .photo {
+    min-height: 50dvh;
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .loc {
+    @include flexbox(column, center, center);
+    .loc_map {
+      width: 100%;
+
+      iframe {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

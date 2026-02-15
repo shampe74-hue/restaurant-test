@@ -1,3 +1,13 @@
+.main_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 1200px;
+  width: 95%;
+  margin-inline: auto;
+}
+
 .btn-nav-second {
   display: flex;
   flex-direction: row;
@@ -38,11 +48,14 @@
 }
 
 @media (min-width: 768px) {
+  .btn-nav-second {
+    display: none;
+  }
   .nav-aside {
     background-color: #eb8b46;
     opacity: 1;
     transform: translateY(0);
-    overflow: hidden;
+    overflow: visible;
     pointer-events: auto;
     max-height: 100vh;
     transition: transform 2s ease, opacity 2s ease, max-height 2s ease;
@@ -59,8 +72,6 @@
     grid-template-columns: 150px 1fr;
     grid-template-areas: "aside menu";
     gap: 5rem;
-    max-width: 1200px;
-    width: 95%;
     margin-inline: auto;
   }
   .main_menu aside {

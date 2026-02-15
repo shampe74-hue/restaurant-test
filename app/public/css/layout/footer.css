@@ -21,9 +21,17 @@ footer .footer__contact a {
   align-items: center;
   gap: 1.5rem;
   margin: 1.5rem 0;
+  transition: 0.2;
+}
+footer .footer__contact a:hover {
+  transform: scale(1.2);
 }
 footer .footer__info li {
   margin: 1.5rem 0;
+  transition: 0.2;
+}
+footer .footer__info li:hover {
+  transform: scale(1.2);
 }
 footer p {
   text-align: center;
